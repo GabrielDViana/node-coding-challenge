@@ -1,19 +1,14 @@
 {
-  "name": "node-coding-challenge",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "flickr-integration",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GabrielDViana/node-coding-challenge.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GabrielDViana/node-coding-challenge/issues"
-  },
-  "homepage": "https://github.com/GabrielDViana/node-coding-challenge#readme"
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1"
+  }
 }
