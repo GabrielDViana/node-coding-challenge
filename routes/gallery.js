@@ -12,7 +12,7 @@ const Gallery = require('../models/gallery.js');
 router.get('/', (req, res) => {
     axios({
         method: 'get',
-        url: 'https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=e775418c709ea18b6b0cafd92b4aa7b1&tags=puppy&format=json&nojsoncallback=1',
+        url: 'https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=e775418c709ea18b6b0cafd92b4aa7b1&user_id=61495424@N00&format=json&nojsoncallback=1',
         responseType: 'application/json'
     }).then(function (response) {
         var responseResume = JSON.parse(response.data);

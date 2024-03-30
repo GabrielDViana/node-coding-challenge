@@ -6,6 +6,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var galleryRouter = require('./routes/gallery');
 var photoRouter = require('./routes/photo');
+var feedRouter = require('./routes/publicFeed');
 
 var cors = require('cors')
 var app = express()
@@ -21,5 +22,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/gallery', galleryRouter);
 app.use('/photo-info', photoRouter);
+app.use('/feed', feedRouter);
 
 module.exports = app;

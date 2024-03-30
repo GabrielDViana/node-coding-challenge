@@ -11,6 +11,8 @@
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "~4.16.1",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "node-html-parser": "^6.1.13",
+    "xml-js": "^1.6.11"
   }
 }
