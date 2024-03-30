@@ -4,7 +4,7 @@ class Photo {
         this.owner = owner || null;
         this.secret = secret || null;
         this.server = server || null;
-        this.farm = farm || null;
+        this.source = farm || null;
         this.title = title || null;
     }
 }

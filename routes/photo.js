@@ -10,14 +10,20 @@ var axios = require('axios');
 router.get('/', (req, res) => {
     axios({
         method: 'get',
-        url: 'https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=e775418c709ea18b6b0cafd92b4aa7b1&tags=cat&format=json&nojsoncallback=1',
+        url: 'https://www.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=e775418c709ea18b6b0cafd92b4aa7b1&photo_id=' 
+            + req.query.photoid + '&format=json&nojsoncallback=1',
         responseType: 'application/json'
     }).then(function (response) {
+        var responseData =  JSON.parse(response.data);
+        const photoData = filterSource(responseData);
         res.json({
-            response: JSON.parse(response.data)
+            source: photoData
         });
     })
 })
+function filterSource(data){
+    return data.sizes.size.filter((item) => item.label === "Small")[0].source;
+}
 module.exports = router;
 
 
