@@ -18,6 +18,7 @@ class Feed {
         this.author =  {
             name: entry.author.name || null,
             uri: entry.author.uri || null,
+            id: entry.author["flickr:nsid"] || null,
             icon: entry.author["flickr:buddyicon"] || null
         };
     }
